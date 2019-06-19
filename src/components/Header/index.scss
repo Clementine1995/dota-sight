@@ -1,0 +1,15 @@
+.ds-header{
+  height: 65px;
+  display: flex;
+  &--left{
+    display: flex;
+  }
+  &__content{
+    display: flex;
+    margin-left: 200px;
+  }
+  &--right{
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
