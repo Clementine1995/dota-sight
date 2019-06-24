@@ -54,6 +54,7 @@ module.exports={
         use: [
           config.extractCss ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader',
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
@@ -113,9 +114,10 @@ module.exports={
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'jsx'],
     alias: {
-      '@': resolve('../src'),
+      '@views': resolve('../src/views'),
       "@ant-design/icons/lib/dist$": resolve('../src/icons.ts'),
-      '@components': resolve('../src/components')
+      '@components': resolve('../src/components'),
+      '@img': resolve('../src/assets/img'),
     }
   },
   performance: { // 性能提示，可以提示过大文件
