@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import './index.scss'
+
 
 function Header() {
   return (
@@ -9,9 +11,21 @@ function Header() {
         <div className="ds-header__title">Dota sight</div>
       </div>
       <div className="ds-header__content">
-        <div className="content__item">英雄</div>
-        <div className="content__item">物品</div>
-        <div className="content__item">资讯</div>
+        <div className="content__item">
+          <Link to="/heros">
+            英雄
+          </Link>
+        </div>
+        <div className="content__item">
+          <Link to="/items">
+            物品
+          </Link>
+        </div>
+        <div className="content__item">
+          <Link to="/news">
+            资讯
+          </Link>
+        </div>
       </div>
       <div className="ds-header--right">
         <div>登录</div>
