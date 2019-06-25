@@ -358,6 +358,9 @@ th, td { /* table elements 表格元素 */
 /* 重置列表元素 */
 ul, ol { list-style: none; }
  
-/* 重置文本格式元素 */
-a { text-decoration: none; }
-a:hover { text-decoration: underline; }
+
+/* 重置a标签样式 */
+a,a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
+  color:inherit;
+}

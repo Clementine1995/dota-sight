@@ -1,0 +1,22 @@
+.ds-heros{
+  &__container{
+    margin: 0 auto;
+    width: 85vw;
+  }
+  &__line{
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__item{
+    img {
+      width: 59px;
+      height: 33px;
+      transition: all .5s;
+    }
+    &:hover{
+      img {
+        transform: scale(2.152);
+      }
+    }
+  }
+}

@@ -24,6 +24,7 @@ const routes = [
     component: About
   },
   {
+    path: "/404",
     component: Error404
   }
   // {

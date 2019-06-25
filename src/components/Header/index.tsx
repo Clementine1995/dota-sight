@@ -8,7 +8,11 @@ function Header() {
     <div className="ds-header">
       <div className="ds-header--left">
         <span>❤</span>
-        <div className="ds-header__title">Dota sight</div>
+        <div className="ds-header__title">
+          <Link to="/">
+            Dota sight
+          </Link>
+        </div>
       </div>
       <div className="ds-header__content">
         <div className="content__item">

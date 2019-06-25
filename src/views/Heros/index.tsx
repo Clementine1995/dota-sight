@@ -1,11 +1,20 @@
 import * as React from 'react'
+import './index.scss'
+import HeroList from './HeroList'
+import herosAll from './heros'
 
-class Heros extends React.Component{
-  render () {
-    return (
-      <div>这里是英雄页</div>
-    )
-  }
+
+function Heros() {
+  return (
+    <div className="ds-heros">
+      <div className="ds-heros__container">
+        {herosAll.map((hero, i) => (
+          <HeroList key={i} heros={hero} />
+        ))}
+      </div>
+    </div>
+  )
 }
+
 
 export default Heros
