@@ -1,0 +1,24 @@
+.ds-items{
+  display: flex;
+  &__desc{
+    width: 260px;
+  }
+  &__container{
+    flex: auto;
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__col{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px;
+    .items-col__item{
+      cursor: pointer;
+    }
+  }
+  &__recipe{
+    width: 260px;
+  }
+}

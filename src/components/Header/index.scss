@@ -1,6 +1,9 @@
 .ds-header{
   height: 65px;
   display: flex;
+  &+div{
+    flex: auto;
+  }
   &--left{
     display: flex;
   }

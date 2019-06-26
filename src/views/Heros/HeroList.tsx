@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { Hero } from '../../types'
+import { HeroType } from '../../types'
 import { Link } from "react-router-dom"
 
 interface IHeros {
-  heros: Array<Hero>
+  heros: Array<HeroType>
 }
 
 function HeroList(prop: IHeros) {
@@ -16,7 +16,7 @@ function HeroList(prop: IHeros) {
   )
 }
 
-function HeroItem(prop: Hero) {
+function HeroItem(prop: HeroType) {
   return (
     <div className="ds-heros__item">
       <Link to="/heros">
