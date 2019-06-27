@@ -1,5 +1,6 @@
 import loadable from '@loadable/component'
 
+const Hero = loadable(() => import(/* webpackChunkName: "heros" */ '@views/Heros/Hero'))
 const Heros = loadable(() => import(/* webpackChunkName: "heros" */ '@views/Heros'))
 const Items = loadable(() => import(/* webpackChunkName: "items" */ '@views/Items'))
 const News = loadable(() => import(/* webpackChunkName: "news" */ '@views/News'))
@@ -10,6 +11,10 @@ const routes = [
   {
     path: "/heros",
     component: Heros
+  },
+  {
+    path: "/heros/:name",
+    component: Hero
   },
   {
     path: "/items",

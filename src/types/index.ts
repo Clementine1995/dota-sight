@@ -6,6 +6,11 @@ export interface HeroType {
   tags: string[]
 }
 
+interface RecipeType {
+  name: string,
+  icon: string
+}
+
 export interface ItemType {
   id: number,
   name: string,
@@ -13,5 +18,8 @@ export interface ItemType {
   isBasic: boolean,
   icon: string,
   sellSite: string[],
-  recipe?: number[]
+  recipes?: RecipeType[],
+  compose?: RecipeType[],
+  desc: string,
+  price: number
 }

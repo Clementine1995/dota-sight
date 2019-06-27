@@ -10,17 +10,20 @@ type ReducerAction =
   }
 
 interface ItemState {
-  items: Array<ItemType>[],
+  items: Array<ItemType>,
   activeItem?: ItemType
 }
 
 function itemReducer(itemState: ItemState, action: ReducerAction): ItemState {
   switch (action.type) {
     case 'clickItem':
-      // itemState.activeItem = itemState.items.flat(1).find(item => item.id === action.id)
-      return {
-        items: itemState.items,
-        activeItem: itemState.items.flat(1).find(item => item.id === action.id)
+      {
+        const a = 1
+        // itemState.activeItem = itemState.items.flat(1).find(item => item.id === action.id)
+        return {
+          items: itemState.items,
+          activeItem: itemState.items.find(item => item.id === action.id)
+        }
       }
     default:
       return itemState

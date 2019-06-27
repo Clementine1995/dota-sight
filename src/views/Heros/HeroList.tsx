@@ -19,7 +19,7 @@ function HeroList(prop: IHeros) {
 function HeroItem(prop: HeroType) {
   return (
     <div className="ds-heros__item">
-      <Link to="/heros">
+      <Link to={`/hero/${prop.name}`}>
         <img src={require(`@img/${prop.icon}`)} alt=""/>
       </Link>
     </div>

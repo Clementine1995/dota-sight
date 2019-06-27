@@ -29,13 +29,20 @@ const heros = [
       icon: "kunkka.png",
       tags:['先手']
     },
+    {
+      name: "兽王",
+      nameEn: "Beast Master",
+      ability: "strength",
+      icon: "beastmaster.png",
+      tags:['先手']
+    },
   ],
   [
     {
       name: "影魔",
       nameEn: "Shadow Filed",
       ability: "agility",
-      icon: "nevermore.png",
+      icon: "shadowfiend.png",
       tags:[]
     },
     {
@@ -43,6 +50,20 @@ const heros = [
       nameEn: "Ember Spirit",
       ability: "agility",
       icon: "emberspirit.png",
+      tags:[]
+    },
+    {
+      name: "卓尔游侠",
+      nameEn: "Drow Ranger",
+      ability: "agility",
+      icon: "drowranger.png",
+      tags:[]
+    },
+    {
+      name: "幻影刺客",
+      nameEn: "Phantom Assassin",
+      ability: "agility",
+      icon: "phantomassassin.png",
       tags:[]
     },
   ],
