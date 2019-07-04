@@ -1,3 +1,5 @@
+/** @format */
+
 import loadable from '@loadable/component'
 
 const Hero = loadable(() => import(/* webpackChunkName: "heros" */ '@views/Heros/Hero'))
@@ -9,27 +11,27 @@ const Error404 = loadable(() => import(/* webpackChunkName: "error-404" */ '@vie
 
 const routes = [
   {
-    path: "/heros",
+    path: '/heros',
     component: Heros
   },
   {
-    path: "/heros/:name",
+    path: '/heros/:name',
     component: Hero
   },
   {
-    path: "/items",
+    path: '/items',
     component: Items
   },
   {
-    path: "/news",
+    path: '/news',
     component: News
   },
   {
-    path: "/about",
+    path: '/about',
     component: About
   },
   {
-    path: "/404",
+    path: '/404',
     component: Error404
   }
   // {

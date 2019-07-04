@@ -1,9 +1,11 @@
-import React, {useContext} from 'react'
+/** @format */
+
+import React, { useContext } from 'react'
 import { ItemType } from '../../types'
 import { ItemDispatch } from './index'
 
 interface IItem {
-  items: Array<ItemType>
+  items: ItemType[]
 }
 
 function ItemCol(prop: IItem) {
@@ -27,6 +29,5 @@ function Item(prop: ItemType) {
     </div>
   )
 }
-
 
 export default ItemCol

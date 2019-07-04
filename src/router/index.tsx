@@ -1,10 +1,12 @@
-import React from "react"
-import { Route } from "react-router-dom"
+/** @format */
+
+import React from 'react'
+import { Route } from 'react-router-dom'
 
 interface IRoute {
-  path?: string,
-  component: any,
-  routes?: Array<IRoute>
+  path?: string
+  component: any
+  routes?: IRoute[]
 }
 
 function RouteWithSubRoutes(route: IRoute) {

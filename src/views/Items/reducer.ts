@@ -1,30 +1,26 @@
-import {
-  ItemType
-} from '../../types'
+/** @format */
 
+import { ItemType } from '../../types'
 
-type ReducerAction = 
-  {
-    type: 'clickItem';
-    id: number
-  }
+interface ReducerAction {
+  type: 'clickItem'
+  id: number
+}
 
 interface ItemState {
-  items: Array<ItemType>,
+  items: ItemType[]
   activeItem?: ItemType
 }
 
 function itemReducer(itemState: ItemState, action: ReducerAction): ItemState {
   switch (action.type) {
-    case 'clickItem':
-      {
-        const a = 1
-        // itemState.activeItem = itemState.items.flat(1).find(item => item.id === action.id)
-        return {
-          items: itemState.items,
-          activeItem: itemState.items.find(item => item.id === action.id)
-        }
+    case 'clickItem': {
+      // itemState.activeItem = itemState.items.flat(1).find(item => item.id === action.id)
+      return {
+        items: itemState.items,
+        activeItem: itemState.items.find(item => item.id === action.id)
       }
+    }
     default:
       return itemState
   }

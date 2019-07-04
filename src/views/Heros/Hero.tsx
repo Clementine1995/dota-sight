@@ -1,12 +1,9 @@
+/** @format */
+
 import * as React from 'react'
 
-
 function Hero() {
-  return (
-    <>
-    </>
-  )
+  return <></>
 }
-
 
 export default Hero

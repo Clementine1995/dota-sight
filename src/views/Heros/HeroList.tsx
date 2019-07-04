@@ -1,9 +1,11 @@
+/** @format */
+
 import * as React from 'react'
 import { HeroType } from '../../types'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 interface IHeros {
-  heros: Array<HeroType>
+  heros: HeroType[]
 }
 
 function HeroList(prop: IHeros) {
@@ -20,7 +22,7 @@ function HeroItem(prop: HeroType) {
   return (
     <div className="ds-heros__item">
       <Link to={`/hero/${prop.name}`}>
-        <img src={require(`@img/${prop.icon}`)} alt=""/>
+        <img src={require(`@img/${prop.icon}`)} alt="" />
       </Link>
     </div>
   )

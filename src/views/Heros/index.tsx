@@ -1,8 +1,9 @@
+/** @format */
+
 import * as React from 'react'
 import './index.scss'
 import HeroList from './HeroList'
 import herosAll from './heros'
-
 
 function Heros() {
   return (
@@ -15,6 +16,5 @@ function Heros() {
     </div>
   )
 }
-
 
 export default Heros

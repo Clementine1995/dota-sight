@@ -1,3 +1,5 @@
+/** @format */
+
 import * as React from 'react'
 import { ItemType } from '../../types'
 
@@ -14,6 +16,5 @@ function Detail(prop: IProp) {
     </>
   )
 }
-
 
 export default Detail
