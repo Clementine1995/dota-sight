@@ -36,31 +36,18 @@ module.exports = {
   },
   rules: {
     // 这里填入你的项目需要的个性化配置，比如：
-    //
-    // // @fixable 一个缩进必须用两个空格替代
-    semi: ['error', 'never'],
-    'no-console': 'off',
-    'no-unused-vars': [
-      'warn',
-      {
-        vars: 'all',
-        args: 'none',
-        caughtErrors: 'none'
-      }
-    ],
     'max-nested-callbacks': 'off',
     'react/no-children-prop': 'off',
-    'typescript/member-ordering': 'off',
-    'typescript/member-delimiter-style': 'off',
     'react/jsx-indent-props': 'off',
     'react/no-did-update-set-state': 'off',
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    // "@typescript-eslint/member-ordering"
+    // @typescript-eslint/member-delimiter-style 定义接口和类型里，成员的分割规则
     "@typescript-eslint/interface-name-prefix": "always",
     "@typescript-eslint/no-var-requires": "off",
     '@typescript-eslint/explicit-member-accessibility': ['error', { accessibility: 'no-public' }],
     '@typescript-eslint/explicit-function-return-type': [
-      // 'warn',
       'off', 
       {
         allowExpressions: true, 

@@ -16,10 +16,12 @@ class App extends React.Component {
       <div className="app">
         <Router>
           <Header />
-          <Route exact path="/" component={Home}></Route>
-          {routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
-          ))}
+          <main>
+            <Route exact path="/" component={Home}></Route>
+            {routes.map((route, i) => (
+              <RouteWithSubRoutes key={i} {...route} />
+            ))}
+          </main>
         </Router>
       </div>
     )

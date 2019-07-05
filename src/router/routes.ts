@@ -2,10 +2,12 @@
 
 import loadable from '@loadable/component'
 
-const Hero = loadable(() => import(/* webpackChunkName: "heros" */ '@views/Heros/Hero'))
+const Hero = loadable(() => import(/* webpackChunkName: "hero" */ '@views/Heros/Hero'))
 const Heros = loadable(() => import(/* webpackChunkName: "heros" */ '@views/Heros'))
 const Items = loadable(() => import(/* webpackChunkName: "items" */ '@views/Items'))
 const News = loadable(() => import(/* webpackChunkName: "news" */ '@views/News'))
+const Match = loadable(() => import(/* webpackChunkName: "match" */ '@views/Match'))
+const Version = loadable(() => import(/* webpackChunkName: "version" */ '@views/News/Version'))
 const About = loadable(() => import(/* webpackChunkName: "about" */ '@views/About'))
 const Error404 = loadable(() => import(/* webpackChunkName: "error-404" */ '@views/ErrorPage/404'))
 
@@ -21,6 +23,14 @@ const routes = [
   {
     path: '/items',
     component: Items
+  },
+  {
+    path: '/version',
+    component: Version
+  },
+  {
+    path: '/match',
+    component: Match
   },
   {
     path: '/news',

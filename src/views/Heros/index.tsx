@@ -7,12 +7,10 @@ import herosAll from './heros'
 
 function Heros() {
   return (
-    <div className="ds-heros">
-      <div className="ds-heros__container">
-        {herosAll.map((hero, i) => (
-          <HeroList key={i} heros={hero} />
-        ))}
-      </div>
+    <div className="ds-heros ds-contariner">
+      {herosAll.map((hero, i) => (
+        <HeroList key={i} heros={hero} />
+      ))}
     </div>
   )
 }
