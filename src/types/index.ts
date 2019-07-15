@@ -25,3 +25,9 @@ export interface ItemType {
   desc: string
   price: number
 }
+
+export interface AjaxResponse {
+  code: number
+  data: any
+  message: string
+}
