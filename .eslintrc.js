@@ -44,7 +44,7 @@ module.exports = {
     "react-hooks/exhaustive-deps": "warn",
     // "@typescript-eslint/member-ordering"
     // @typescript-eslint/member-delimiter-style 定义接口和类型里，成员的分割规则
-    "@typescript-eslint/interface-name-prefix": "always",
+    "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/no-var-requires": "off",
     '@typescript-eslint/explicit-member-accessibility': ['error', { accessibility: 'no-public' }],
     '@typescript-eslint/explicit-function-return-type': [
@@ -55,6 +55,7 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/camelcase': ['off', {properties: 'always'}],
     '@typescript-eslint/no-unused-vars': ['error', {

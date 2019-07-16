@@ -1,10 +1,10 @@
 {
-  "name": "react-ts-template",
+  "name": "dota-sight",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.dev.js --mode development",
+    "dev": "webpack-dev-server --config build/webpack.dev.js --mode development --hot",
     "test-build": "webpack --config build/webpack.prod.js --mode production --env test",
     "pre-build": "webpack --config build/webpack.prod.js --mode production --env pre",
     "prod-build": "webpack --config build/webpack.prod.js --mode production --env prod",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Clementine1995/react-ts-template.git"
+    "url": "git+https://github.com/Clementine1995/dota-sight.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Clementine1995/react-ts-template/issues"
+    "url": "https://github.com/Clementine1995/dota-sight/issues"
   },
-  "homepage": "https://github.com/Clementine1995/react-ts-template#readme",
+  "homepage": "https://github.com/Clementine1995/dota-sight#readme",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "antd": "^3.20.2",
