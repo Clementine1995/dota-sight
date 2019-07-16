@@ -7,7 +7,7 @@ import herosAll from './heros'
 
 function Heros() {
   return (
-    <div className="ds-heros ds-contariner">
+    <div className="ds-heros ds-container">
       {herosAll.map((hero, i) => (
         <HeroList key={i} heros={hero} />
       ))}

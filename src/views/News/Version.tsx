@@ -33,7 +33,7 @@ function Version() {
   }, [])
 
   return (
-    <article className="ds-version ds-contariner">
+    <article className="ds-version ds-container">
       <div className="">
         <span>版本：</span>
         <Select value={version} onChange={handleChange}>

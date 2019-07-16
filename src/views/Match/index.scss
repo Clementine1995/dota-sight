@@ -1,0 +1,15 @@
+.ds-match{
+  display: flex;
+  justify-content: space-between;
+  &__reports{
+    flex: 1;
+    margin: 28px;
+    .reports__item{
+      padding-bottom: 12px;
+    }
+  }
+  &__recent{
+    width: 200px;
+    
+  }
+}
