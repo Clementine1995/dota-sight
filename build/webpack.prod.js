@@ -12,6 +12,7 @@ const { assetsPath, resolve } = require('./utils')
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+
 const DLL_PATH = '../dll'
 
 const prodConfig = {
@@ -29,6 +30,7 @@ const prodConfig = {
       // maxAsyncRequests: 5, // 默认值，按需加载的 chunk，最大数量
       // maxInitialRequests: 3, // 默认值，初始加载的 chunk，最大数量
       // name: true, // 默认值，控制 chunk 的命名
+      automaticNameDelimiter: '-', // 默认值 ~
       cacheGroups: {
         // 配置缓存组
         vendor: {
@@ -41,6 +43,7 @@ const prodConfig = {
         common: {
           name: 'common',
           chunks: 'initial',
+          // test: resolve("src/components"), // 可自定义拓展你的规则
           minChunks: 2,
           priority: 5,
           reuseExistingChunk: true
@@ -73,6 +76,16 @@ const prodConfig = {
         }
       })
     ]
+  },
+  performance: {
+    // 性能提示，可以提示过大文件
+    hints: 'warning', // 性能提示开关 false | "error" | "warning"
+    maxAssetSize: 100000, // 生成的文件最大限制 整数类型（以字节为单位）
+    maxEntrypointSize: 100000, // 引入的文件最大限制 整数类型（以字节为单位）
+    assetFilter: function(assetFilename) {
+      // 提供资源文件名的断言函数
+      return /\.(png|jpe?g|gif|svg)(\?.*)?$/.test(assetFilename)
+    }
   },
   plugins: [
     new CleanWebpackPlugin(),
