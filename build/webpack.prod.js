@@ -17,10 +17,12 @@ const DLL_PATH = '../dll'
 
 const prodConfig = {
   mode: 'production',
-  devtool: 'source-map',
+  devtool: 'nosources-source-map', // source-map 是完整的不过体积大很多
   optimization: {
     // 性能配置
-    runtimeChunk: true, // 开启 manifest 缓存，每个入口单独创建
+    runtimeChunk: {
+      name: entrypoint => `runtime-${entrypoint.name}`
+    }, // 开启 manifest 缓存，每个入口单独创建
     moduleIds: 'hashed',
     splitChunks: {
       chunks: 'async', // 提取的 chunk 类型，all: 所有，async: 异步，initial: 初始
@@ -62,7 +64,7 @@ const prodConfig = {
             pure_funcs: ['console.log'] // 移除console
           }
         },
-        sourceMap: Boolean(config.sourceMap)
+        sourceMap: true
       }),
       new OptimizeCssAssetsPlugin({
         cssProcessor: require('cssnano'),
@@ -108,7 +110,9 @@ const prodConfig = {
     }),
     new AddAssetHtmlPlugin({
       filepath: resolve(`${DLL_PATH}/**/*.js`),
-      includeSourcemap: false
+      includeSourcemap: false,
+      outputPath: assetsPath('js'),
+      publicPath: 'js'
     }),
     new ScriptExtHtmlWebpackPlugin({
       //`runtime` must same as runtimeChunk name. default is `runtime`
