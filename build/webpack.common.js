@@ -143,7 +143,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', 'jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       '@views': resolve('../src/views'),
       '@ant-design/icons/lib/dist$': resolve('../src/icons.ts'),
